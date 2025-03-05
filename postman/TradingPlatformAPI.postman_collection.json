@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "6b78434e-20ac-4893-92f0-fc8ce9bcc515",
+		"name": "TradingPlatformAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26662763"
+	},
+	"item": [
+		{
+			"name": "api/trading-statistics/stats",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/trading-statistics/stats/?symbol=AAPL&k=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"trading-statistics",
+						"stats",
+						""
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "AAPL"
+						},
+						{
+							"key": "k",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/trading-statistics/add_batch",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"symbol\": \"DDD\",\n    \"values\": [34, 786, 12, 45, 778, 443, 1045, 233, 278]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/trading-statistics/add_batch/?symbol=AAPL&values=[100, 200, 300, 400, 500]",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"trading-statistics",
+						"add_batch",
+						""
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "AAPL"
+						},
+						{
+							"key": "values",
+							"value": "[100, 200, 300, 400, 500]"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

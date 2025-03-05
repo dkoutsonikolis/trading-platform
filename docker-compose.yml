@@ -1,0 +1,10 @@
+services:
+  web:
+    build:
+      context: .
+    restart: unless-stopped
+    container_name: trading_platform_web
+    ports:
+      - '8000:8000'
+    volumes:
+      - .:/code
